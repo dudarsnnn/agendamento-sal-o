@@ -1,0 +1,47 @@
+class Pessoa {
+  constructor(nome, telefone) {
+    this.nome = nome;
+    this.telefone = telefone;
+  }
+}
+
+class Cliente extends Pessoa {
+  constructor(nome, telefone) {
+    super(nome, telefone);
+  }
+}
+
+class Servico {
+  constructor(nome, preco) {
+    this.nome = nome;
+    this.preco = preco;
+  }
+}
+
+class Agendamento {
+  constructor(cliente, servico, data, hora) {
+    this.cliente = cliente;
+    this.servico = servico;
+    this.data = data;
+    this.hora = hora;
+  }
+
+  mostrarAgendamento() {
+    console.log(`Cliente: ${this.cliente.nome}`);
+    console.log(`Serviço: ${this.servico.nome}`);
+    console.log(`Data: ${this.data} às ${this.hora}`);
+  }
+}
+
+// Testando o sistema
+const cliente1 = new Cliente("Duda", "11999999999");
+const servico1 = new Servico("Corte de cabelo", 50);
+
+const agendamento1 = new Agendamento(
+  cliente1,
+  servico1,
+  "27/03/2026",
+  "14:00"
+);
+
+agendamento1.mostrarAgendamento();
