@@ -14,3 +14,7 @@ Projeto desenvolvido para praticar conceitos de Programação Orientada a Objeto
 
 ## Tecnologias
 - JavaScript
+
+## Diagrama UML
+
+![Diagrama UML Agendamento Salão](uml.png)
